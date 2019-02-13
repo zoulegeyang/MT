@@ -1,11 +1,20 @@
 # MT
 基于注意力机制的机器翻译模型
+### 计算图
+该模型主要用到了seq2seq和注意力机制，编码器与解码器用的单元都是GRU。
+
+求注意力参数的公式(EO表示编码器的输出，H表示编码器最终输出的隐藏层；FC表示一个全连接层）：
+
+* score = FC(tanh(FC(EO) + FC(H)))
+*  attention weights = softmax(score, axis = 1)
+* context vector = sum(attention weights * EO, axis = 1)
 
 ![计算图](https://github.com/byyML/MT/blob/master/picture/%E8%AE%A1%E7%AE%97%E5%9B%BE.png)
 
 ## 训练数据
 * 来源： http://www.manythings.org/anki/
 * 训练数据由两万多个成对的语句组成，如：I love you. 我爱你。
+
 ## 训练模型
 ```python
 #在目录MT下，在命令行中依次运行下面语句
@@ -15,7 +24,10 @@ model = Model()
 model.load_data()
 #训练,默认EPOCHS = 10
 model.train()
+
 ```
+训练过程如下：
+![训练](https://github.com/byyML/MT/blob/master/picture/train.tmp.jpg)
 
 ## 使用训练后的模型将中文翻译成英文
 ```python
