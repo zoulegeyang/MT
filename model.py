@@ -40,6 +40,7 @@ class Model():
 		print(">>>>>加载完毕")
 		
 	def prepare_model(self,units=1024, batch_size=64, embedding_dim=256):
+		#每批次的大小
 		self.BATCH_SIZE = batch_size
 		self.N_BATCH = self.BUFFER_SIZE//batch_size
 		self.embedding_dim = embedding_dim
@@ -62,6 +63,7 @@ class Model():
 		return checkpoint,optimizer,checkpoint_prefix
 		
 	def train(self, EPOCHS = 10):
+		#先设置检查点，用于保存训练的模型，以及看是否有已经训练的模型，如果有，则在已经训练得模型的基础上进行训练
 		checkpoint,optimizer,checkpoint_prefix = self.load_model()
 		print(">>>>>>开始训练")
 		for epoch in range(EPOCHS):
