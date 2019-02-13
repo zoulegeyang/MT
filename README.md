@@ -1,7 +1,7 @@
 # MT
 基于注意力机制的机器翻译模型
 
-![计算图](/MT/picture/计算图.png）
+![计算图](https://github.com/byyML/MT/blob/master/picture/%E8%AE%A1%E7%AE%97%E5%9B%BE.png）
 
 ## 训练数据
 * 来源： http://www.manythings.org/anki/
