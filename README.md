@@ -38,6 +38,9 @@ model.load_data()
 sentence = input("请输入要翻译的中文句子：")
 model.translate(sentence)
 ```
+![translate](https://github.com/byyML/MT/blob/master/picture/translate.tmp.jpg)
+
+可以看出短的句子还可以，但稍长一些的效果不太好，一方面是由于训练数据量的限制，另一方面进行训练的迭代次数只进行了20次，以及模型还可以做许多改进，比如将训练的句子倒置，然后“喂给”模型等等。
 
 ## 保存模型
 1. 模型在训练中，每隔2epochs，会将训练数据保存在/MT/training_checkpoints目录下，下次训练模型会先判断是否有已经训练的数据，如果有会接着上次继续训练，从而提高训练效率，如果没有，则会从零开始训练。
