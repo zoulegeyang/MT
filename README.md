@@ -17,7 +17,7 @@
 
 ## 训练模型
 ```python
-#在目录MT下，在命令行中依次运行下面语句
+#在目录MT下，先新建一个文件夹training_checkpoints，用于保存检查点，然后在命令行中依次运行下面语句
 from model import Model
 model = Model()
 # 加载数据，默认参数：path='./dataset/mt_en2ch.txt'， num_examples = 20000, batch_size=64
@@ -27,6 +27,7 @@ model.train()
 
 ```
 训练过程如下：
+
 ![训练](https://github.com/byyML/MT/blob/master/picture/train.tmp.jpg)
 
 ## 使用训练后的模型将中文翻译成英文
