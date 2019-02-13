@@ -35,4 +35,5 @@ model.translate(sentence)
 
 
 ![计算图](https://github.com/byyML/MT/blob/master/picture/%E8%AE%A1%E7%AE%97%E5%9B%BE.png ）
-![计算图](https://github.com/byyML/MT/blob/master/picture/%E8%AE%A1%E7%AE%97%E5%9B%BE.png）
+
+![picture](https://github.com/byyML/MT/blob/master/picture/%E8%AE%A1%E7%AE%97%E5%9B%BE.png）
