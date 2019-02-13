@@ -1,6 +1,7 @@
 # MT
 基于注意力机制的机器翻译模型
 
+![计算图](/MT/picture/计算图.png）
 
 ## 训练数据
 * 来源： http://www.manythings.org/anki/
@@ -28,4 +29,5 @@ model.translate(sentence)
 
 ## 保存模型
 1. 模型在训练中，每隔2epochs，会将训练数据保存在/MT/training_checkpoints目录下，下次训练模型会先判断是否有已经训练的数据，如果有会接着上次继续训练，从而提高训练效率，如果没有，则会从零开始训练。
-2. 这是我训练后的模型：https://pan.baidu.com/s/1TngW_BDjkFH9rBW5jrCikg，下载后方法放到/MT/training_checkpoints目录下，即可直接进行翻译
+2. 这是我训练后的模型：https://pan.baidu.com/s/1TngW_BDjkFH9rBW5jrCikg
+下载后在/MT下新建training_checkpoints目录，将下载的文件放在training_checkpoints目录下，即可直接用来训练或翻译
